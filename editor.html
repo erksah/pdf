@@ -1,259 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Unofficial Transcript - Mohammad Shariq Pir</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 30px;
-      color: #000;
-    }
-    h2 {
-      text-align: center;
-      text-transform: uppercase;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 20px;
-    }
-    th, td {
-      border: 1px solid #000;
-      padding: 8px;
-      text-align: center;
-    }
-    th {
-      background-color: #ddd;
-    }
-    .header {
-      text-align: left;
-      margin-bottom: 20px;
-    }
-    .highlight {
-      font-weight: bold;
-    }
-    .year-section {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-      margin-bottom: 30px;
-    }
-    .semester {
-      flex: 1;
-      min-width: 45%;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>All-in-One PDF Tool</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.10.111/pdf.min.js"></script>
+<style>
+  body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; padding: 0; }
+  header { background: #007bff; color: white; padding: 15px; text-align: center; font-size: 20px; }
+  #toolbar { padding: 10px; background: white; display: flex; gap: 10px; align-items: center; justify-content: center; }
+  button { padding: 8px 14px; cursor: pointer; background: #007bff; color: white; border: none; border-radius: 5px; }
+  button:hover { background: #0056b3; }
+  #pages { display: flex; flex-wrap: wrap; padding: 10px; gap: 10px; background: #fafafa; }
+  .page-thumb { border: 2px solid transparent; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); padding: 5px; border-radius: 5px; }
+  .page-thumb img { display: block; max-width: 150px; cursor: move; }
+  .delete-btn { background: red; color: white; border: none; font-size: 12px; padding: 3px 5px; cursor: pointer; margin-top: 5px; border-radius: 3px; }
+  .delete-btn:hover { background: darkred; }
+</style>
 </head>
 <body>
-  <h2>Unofficial Transcript - Grade Sheet</h2>
-  <p class="header"><strong>University:</strong> Jawaharlal Nehru Technological University Hyderabad</p>
-  <p class="header"><strong>College:</strong> University College of Engineering Science & Technology, Hyderabad (Autonomous)</p>
-  <p class="header"><strong>Name:</strong> MOHAMMAD SHARIQ PIR</p>
-  <p class="header"><strong>Hall Ticket Number:</strong> 22011A0554</p>
-  <p class="header"><strong>Course:</strong> B.Tech</p>
-  <p class="header"><strong>Branch:</strong> Computer Science and Engineering</p>
-  <p class="header"><strong>Regulation:</strong> R22</p>
 
-  <h3>1st Year</h3>
-<div class="year-section">
-  <div class="semester">
-    <h4>1-1 Semester</h4>
-    <table>
-      <tr><th>Code</th><th>Subject</th><th>Credits</th><th>Grade Point</th><th>G</th></tr>
-      <tr><td>22M01</td><td>Matrices and Calculus</td><td>4</td><td>7</td><td>B+</td></tr>
-      <tr><td>22C01</td><td>Engineering Chemistry</td><td>4</td><td>7</td><td>B+</td></tr>
-      <tr><td>22CS06</td><td>Programming for Problem Solving</td><td>3</td><td>9</td><td>A+</td></tr>
-      <tr><td>22EC01</td><td>Basic Electrical Engineering</td><td>2</td><td>7</td><td>B+</td></tr>
-      <tr><td>22ME02</td><td>Computer Aided Engineering Graphics</td><td>3</td><td>6</td><td>B</td></tr>
-      <tr><td>22CS05L</td><td>Elements of CSE Lab</td><td>1</td><td>10</td><td>O</td></tr>
-      <tr><td>22C01L</td><td>Engineering Chemistry Lab</td><td>1</td><td>9</td><td>A+</td></tr>
-      <tr><td>22CS06L</td><td>Programming for Problem Solving Lab</td><td>1</td><td>9</td><td>A+</td></tr>
-      <tr><td>22EC01L</td><td>Basic Electrical Engineering Lab</td><td>1</td><td>9</td><td>A+</td></tr>
-    </table>
-    <p class="highlight">SGPA: 7.60    Status: Pass</p>
-  </div>
-  <div class="semester">
-    <h4>1-2 Semester</h4>
-    <table>
-      <tr><th>Code</th><th>Subject</th><th>Credits</th><th>Grade Point</th><th>G</th></tr>
-      <tr><td>22C02M</td><td>Environmental Science</td><td>P</td><td>9</td><td>A+</td></tr>
-      <tr><td>22CS02L</td><td>Python Programming Lab</td><td>2</td><td>9</td><td>A+</td></tr>
-      <tr><td>22CS07L</td><td>IT Workshop</td><td>1</td><td>9</td><td>A+</td></tr>
-      <tr><td>22EC03</td><td>Electronic Devices and Circuits</td><td>2</td><td>6</td><td>B</td></tr>
-      <tr><td>22H01</td><td>English for Skill Enhancement</td><td>2</td><td>8</td><td>A</td></tr>
-      <tr><td>22H02L</td><td>English Language & Communication Skills Lab</td><td>1</td><td>8</td><td>A</td></tr>
-      <tr><td>22M02</td><td>ODE & Vector Calculus</td><td>4</td><td>7</td><td>B+</td></tr>
-      <tr><td>22ME01L</td><td>Engineering Workshop</td><td>2.5</td><td>9</td><td>A+</td></tr>
-      <tr><td>22P01</td><td>Applied Physics</td><td>4</td><td>6</td><td>B</td></tr>
-      <tr><td>22P01L</td><td>Applied Physics Lab</td><td>1.5</td><td>8</td><td>A</td></tr>
-    </table>
-    <p class="highlight">SGPA: 7.48    Status: Pass</p>
-  </div>
+<header>📄 PDF All-in-One Editor</header>
+
+<div id="toolbar">
+  <input type="file" id="fileInput" multiple accept="application/pdf,image/*">
+  <button onclick="exportPDF()">💾 Export PDF</button>
 </div>
 
-<h3>2nd Year</h3>
-<div class="year-section">
-  <div class="semester">
-    <h4>2-1 Semester</h4>
-    <table>
-      <tr><th>Code</th><th>Subject</th><th>Credits</th><th>Grade Point</th><th>G</th></tr>
-      <tr><td>22H05M</td><td>Gender Sensitization Lab</td><td>P</td><td>10</td><td>S</td></tr>
-      <tr><td>22EE10</td><td>Digital Electronics</td><td>3</td><td>9</td><td>A+</td></tr>
-      <tr><td>22CS09</td><td>Data Structures</td><td>3</td><td>7</td><td>B+</td></tr>
-      <tr><td>22M06</td><td>Computer Orientation Statistical Methods</td><td>4</td><td>6</td><td>B</td></tr>
-      <tr><td>22CS10</td><td>OOP Through Java</td><td>3</td><td>8</td><td>A</td></tr>
-      <tr><td>22CS09L</td><td>Data Structures Lab</td><td>1.5</td><td>10</td><td>O</td></tr>
-      <tr><td>22CS10L</td><td>OOP Through Java Lab</td><td>1.5</td><td>9</td><td>A+</td></tr>
-      <tr><td>22CS11L</td><td>SDC (Data Visualization - R / Power BI)</td><td>1</td><td>8</td><td>A</td></tr>
-      <tr><td>22CS18</td><td>Computer Organization & Architecture</td><td>3</td><td>5</td><td>C</td></tr>
-    </table>
-    <p class="highlight">SGPA: 7.37    Status: Pass</p>
-  </div>
-  <div class="semester">
-    <h4>2-2 Semester</h4>
-    <table>
-      <tr><th>Code</th><th>Subject</th><th>Credits</th><th>Grade Point</th><th>G</th></tr>
-      <tr><td>22H04M</td><td>Constitution of India</td><td>P</td><td>10</td><td>S</td></tr>
-      <tr><td>22CS17</td><td>Software Engineering</td><td>3</td><td>9</td><td>A+</td></tr>
-      <tr><td>22CS14</td><td>Operating Systems</td><td>3</td><td>7</td><td>B+</td></tr>
-      <tr><td>22CS14L</td><td>Operating Systems Lab</td><td>1</td><td>5</td><td>C</td></tr>
-      <tr><td>22CS13</td><td>Discrete Mathematics</td><td>3</td><td>8</td><td>A</td></tr>
-      <tr><td>22H08</td><td>Business Economics & Financial Analysis</td><td>3</td><td>9</td><td>A+</td></tr>
-      <tr><td>22CS12</td><td>Database Management Systems</td><td>3</td><td>10</td><td>O</td></tr>
-      <tr><td>22CS12L</td><td>DBMS Lab</td><td>1</td><td>7</td><td>B+</td></tr>
-      <tr><td>22CS16</td><td>SDC (Node.js / React.js / Django)</td><td>1</td><td>9</td><td>A+</td></tr>
-      <tr><td>22CS15P</td><td>Real-time/Societal Project</td><td>2</td><td>10</td><td>O</td></tr>
-    </table>
-    <p class="highlight">SGPA: 8.50    Status: Pass</p>
-  </div>
-</div>
+<div id="pages"></div>
 
-<h3>3rd Year</h3>
-<div class="year-section">
-  <div class="semester">
-    <h4>3-1 Semester</h4>
-    <table>
-      <tr><th>Code</th><th>Subject</th><th>Credits</th><th>Grade Point</th><th>G</th></tr>
-      <tr><td>22H03L</td><td>Advanced English Communication Skills Lab</td><td>1</td><td>8</td><td>A</td></tr>
-      <tr><td>22H07M</td><td>Intellectual Property Rights</td><td>P</td><td>6</td><td>S</td></tr>
-      <tr><td>22CS19</td><td>Design & Analysis of Algorithms</td><td>4</td><td>10</td><td>O</td></tr>
-      <tr><td>22CS23</td><td>Data Analytics</td><td>3</td><td>9</td><td>A+</td></tr>
-      <tr><td>22CS29</td><td>Natural Language Processing</td><td>3</td><td>9</td><td>A+</td></tr>
-      <tr><td>22CS30</td><td>SDC (UI Design - Flutter)</td><td>1</td><td>9</td><td>A+</td></tr>
-      <tr><td>22CS63</td><td>DevOps</td><td>3</td><td>9</td><td>A+</td></tr>
-      <tr><td>22CS63L</td><td>DevOps Lab</td><td>1</td><td>9</td><td>A+</td></tr>
-      <tr><td>22CS59</td><td>Computer Networks</td><td>3</td><td>8</td><td>A</td></tr>
-      <tr><td>22CS59L</td><td>Computer Networks Lab</td><td>1</td><td>9</td><td>A+</td></tr>
-    </table>
-    <p class="highlight">SGPA: 9.00    Status: Pass</p>
-  </div>
-</div>
+<script>
+let allPages = []; // {pdfDoc, pageIndex} or {imageData}
 
-<div class="semester">
-    <h4>3-2 Semester</h4>
-    <table>
-      <tr><th>Code</th><th>Subject</th><th>Credits</th><th>Grade Point</th><th>G</th></tr>
-      <tr><td>22H04M</td><td>Constitution of India</td><td>P</td><td>10</td><td>S</td></tr>
-      <tr><td>22CS17</td><td>Software Engineering</td><td>3</td><td>9</td><td>A+</td></tr>
-      <tr><td>22CS14</td><td>Operating Systems</td><td>3</td><td>7</td><td>B+</td></tr>
-      <tr><td>22CS14L</td><td>Operating Systems Lab</td><td>1</td><td>5</td><td>C</td></tr>
-      <tr><td>22CS13</td><td>Discrete Mathematics</td><td>3</td><td>8</td><td>A</td></tr>
-      <tr><td>22H08</td><td>Business Economics & Financial Analysis</td><td>3</td><td>9</td><td>A+</td></tr>
-      <tr><td>22CS12</td><td>Database Management Systems</td><td>3</td><td>10</td><td>O</td></tr>
-      <tr><td>22CS12L</td><td>DBMS Lab</td><td>1</td><td>7</td><td>B+</td></tr>
-      <tr><td>22CS16</td><td>SDC (Node.js / React.js / Django)</td><td>1</td><td>9</td><td>A+</td></tr>
-      <tr><td>22CS15P</td><td>Real-time/Societal Project</td><td>2</td><td>10</td><td>O</td></tr>
-    </table>
-    <p class="highlight">SGPA: 8.50    Status: Pass</p>
-  </div>
-</div>
+document.getElementById("fileInput").addEventListener("change", async function() {
+  for (let file of this.files) {
+    if (file.type === "application/pdf") {
+      await loadPDF(file);
+    } else if (file.type.startsWith("image/")) {
+      await loadImage(file);
+    }
+  }
+  renderPages();
+  this.value = ""; // reset so same file can be re-added
+});
 
-<h3>3rd Year</h3>
-<div class="year-section">
-  <div class="semester">
-    <h4>3-2 Semester</h4>
-    <table>
-      <tr><th>Code</th><th>Subject</th><th>Credits</th><th>Grade Point</th><th>G</th></tr>
-      <tr><td>22H03L</td><td>Advanced English Communication Skills Lab</td><td>1</td><td>8</td><td>A</td></tr>
-      <tr><td>22H07M</td><td>Intellectual Property Rights</td><td>P</td><td>6</td><td>S</td></tr>
-      <tr><td>22CS19</td><td>Design & Analysis of Algorithms</td><td>4</td><td>10</td><td>O</td></tr>
-      <tr><td>22CS23</td><td>Data Analytics</td><td>3</td><td>9</td><td>A+</td></tr>
-      <tr><td>22CS29</td><td>Natural Language Processing</td><td>3</td><td>9</td><td>A+</td></tr>
-      <tr><td>22CS30</td><td>SDC (UI Design - Flutter)</td><td>1</td><td>9</td><td>A+</td></tr>
-      <tr><td>22CS63</td><td>DevOps</td><td>3</td><td>9</td><td>A+</td></tr>
-      <tr><td>22CS63L</td><td>DevOps Lab</td><td>1</td><td>9</td><td>A+</td></tr>
-      <tr><td>22CS59</td><td>Computer Networks</td><td>3</td><td>8</td><td>A</td></tr>
-      <tr><td>22CS59L</td><td>Computer Networks Lab</td><td>1</td><td>9</td><td>A+</td></tr>
-    </table>
-    <p class="highlight">SGPA: 9.00    Status: Pass</p>
-  </div>
-</div>
+async function loadPDF(file) {
+  const arrayBuffer = await file.arrayBuffer();
+  const pdfjs = window['pdfjs-dist/build/pdf'];
+  pdfjs.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.10.111/pdf.worker.min.js";
+  const pdf = await pdfjs.getDocument({ data: arrayBuffer }).promise;
+  for (let i = 0; i < pdf.numPages; i++) {
+    const page = await pdf.getPage(i + 1);
+    const viewport = page.getViewport({ scale: 0.5 });
+    const canvas = document.createElement("canvas");
+    const ctx = canvas.getContext("2d");
+    canvas.height = viewport.height;
+    canvas.width = viewport.width;
+    await page.render({ canvasContext: ctx, viewport }).promise;
+    const imgData = canvas.toDataURL("image/jpeg", 0.8);
+    allPages.push({ type: "pdf", data: arrayBuffer, pageNum: i });
+    allPages[allPages.length - 1].preview = imgData;
+  }
+}
 
-<div class="semester">
-    <h4>3-2 Semester</h4>
-    <table>
-      <tr><th>Code</th><th>Subject</th><th>Credits</th><th>Grade Point</th><th>G</th></tr>
-      <tr><td>22H04M</td><td>Constitution of India</td><td>P</td><td>10</td><td>S</td></tr>
-      <tr><td>22CS17</td><td>Software Engineering</td><td>3</td><td>9</td><td>A+</td></tr>
-      <tr><td>22CS14</td><td>Operating Systems</td><td>3</td><td>7</td><td>B+</td></tr>
-      <tr><td>22CS14L</td><td>Operating Systems Lab</td><td>1</td><td>5</td><td>C</td></tr>
-      <tr><td>22CS13</td><td>Discrete Mathematics</td><td>3</td><td>8</td><td>A</td></tr>
-      <tr><td>22H08</td><td>Business Economics & Financial Analysis</td><td>3</td><td>9</td><td>A+</td></tr>
-      <tr><td>22CS12</td><td>Database Management Systems</td><td>3</td><td>10</td><td>O</td></tr>
-      <tr><td>22CS12L</td><td>DBMS Lab</td><td>1</td><td>7</td><td>B+</td></tr>
-      <tr><td>22CS16</td><td>SDC (Node.js / React.js / Django)</td><td>1</td><td>9</td><td>A+</td></tr>
-      <tr><td>22CS15P</td><td>Real-time/Societal Project</td><td>2</td><td>10</td><td>O</td></tr>
-    </table>
-    <p class="highlight">SGPA: 8.50    Status: Pass</p>
-  </div>
-</div>
+async function loadImage(file) {
+  const imgData = await readFileAsDataURL(file);
+  allPages.push({ type: "image", preview: imgData, fileData: imgData });
+}
 
-<h3>3rd Year</h3>
-<div class="year-section">
-  <div class="semester">
-    <h4>4-1 Semester</h4>
-    <table>
-      <tr><th>Code</th><th>Subject</th><th>Credits</th><th>Grade Point</th><th>G</th></tr>
-      <tr><td>22H03L</td><td>Advanced English Communication Skills Lab</td><td>1</td><td>8</td><td>A</td></tr>
-      <tr><td>22H07M</td><td>Intellectual Property Rights</td><td>P</td><td>6</td><td>S</td></tr>
-      <tr><td>22CS19</td><td>Design & Analysis of Algorithms</td><td>4</td><td>10</td><td>O</td></tr>
-      <tr><td>22CS23</td><td>Data Analytics</td><td>3</td><td>9</td><td>A+</td></tr>
-      <tr><td>22CS29</td><td>Natural Language Processing</td><td>3</td><td>9</td><td>A+</td></tr>
-      <tr><td>22CS30</td><td>SDC (UI Design - Flutter)</td><td>1</td><td>9</td><td>A+</td></tr>
-      <tr><td>22CS63</td><td>DevOps</td><td>3</td><td>9</td><td>A+</td></tr>
-      <tr><td>22CS63L</td><td>DevOps Lab</td><td>1</td><td>9</td><td>A+</td></tr>
-      <tr><td>22CS59</td><td>Computer Networks</td><td>3</td><td>8</td><td>A</td></tr>
-      <tr><td>22CS59L</td><td>Computer Networks Lab</td><td>1</td><td>9</td><td>A+</td></tr>
-    </table>
-    <p class="highlight">SGPA: 9.00    Status: Pass</p>
-  </div>
-</div>
+function renderPages() {
+  const container = document.getElementById("pages");
+  container.innerHTML = "";
+  allPages.forEach((p, idx) => {
+    const div = document.createElement("div");
+    div.className = "page-thumb";
+    div.draggable = true;
+    div.ondragstart = e => e.dataTransfer.setData("text/plain", idx);
+    div.ondragover = e => e.preventDefault();
+    div.ondrop = e => {
+      e.preventDefault();
+      const from = e.dataTransfer.getData("text/plain");
+      const to = idx;
+      allPages.splice(to, 0, allPages.splice(from, 1)[0]);
+      renderPages();
+    };
+    const img = document.createElement("img");
+    img.src = p.preview;
+    const delBtn = document.createElement("button");
+    delBtn.className = "delete-btn";
+    delBtn.textContent = "🗑 Delete";
+    delBtn.onclick = () => { allPages.splice(idx, 1); renderPages(); };
+    div.appendChild(img);
+    div.appendChild(delBtn);
+    container.appendChild(div);
+  });
+}
 
-<div class="semester">
-    <h4>3-2 Semester</h4>
-    <table>
-      <tr><th>Code</th><th>Subject</th><th>Credits</th><th>Grade Point</th><th>G</th></tr>
-      <tr><td>22H04M</td><td>Constitution of India</td><td>P</td><td>10</td><td>S</td></tr>
-      <tr><td>22CS17</td><td>Software Engineering</td><td>3</td><td>9</td><td>A+</td></tr>
-      <tr><td>22CS14</td><td>Operating Systems</td><td>3</td><td>7</td><td>B+</td></tr>
-      <tr><td>22CS14L</td><td>Operating Systems Lab</td><td>1</td><td>5</td><td>C</td></tr>
-      <tr><td>22CS13</td><td>Discrete Mathematics</td><td>3</td><td>8</td><td>A</td></tr>
-      <tr><td>22H08</td><td>Business Economics & Financial Analysis</td><td>3</td><td>9</td><td>A+</td></tr>
-      <tr><td>22CS12</td><td>Database Management Systems</td><td>3</td><td>10</td><td>O</td></tr>
-      <tr><td>22CS12L</td><td>DBMS Lab</td><td>1</td><td>7</td><td>B+</td></tr>
-      <tr><td>22CS16</td><td>SDC (Node.js / React.js / Django)</td><td>1</td><td>9</td><td>A+</td></tr>
-      <tr><td>22CS15P</td><td>Real-time/Societal Project</td><td>2</td><td>10</td><td>O</td></tr>
-    </table>
-    <p class="highlight">SGPA: 8.50    Status: Pass</p>
-  </div>
-</div>
+async function exportPDF() {
+  const { PDFDocument } = PDFLib;
+  const outPdf = await PDFDocument.create();
+  for (let p of allPages) {
+    if (p.type === "pdf") {
+      const srcPdf = await PDFDocument.load(p.data);
+      const [copiedPage] = await outPdf.copyPages(srcPdf, [p.pageNum]);
+      outPdf.addPage(copiedPage);
+    } else if (p.type === "image") {
+      const jpgImage = await outPdf.embedJpg(p.fileData);
+      const page = outPdf.addPage([jpgImage.width, jpgImage.height]);
+      page.drawImage(jpgImage, { x: 0, y: 0, width: jpgImage.width, height: jpgImage.height });
+    }
+  }
+  const pdfBytes = await outPdf.save();
+  downloadBlob(pdfBytes, "output.pdf");
+}
 
+function readFileAsDataURL(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = reject;
+    reader.readAsDataURL(file);
+  });
+}
 
+function downloadBlob(bytes, filename) {
+  const blob = new Blob([bytes], { type: "application/pdf" });
+  const link = document.createElement("a");
+  link.href = URL.createObjectURL(blob);
+  link.download = filename;
+  link.click();
+}
+</script>
 
-
-
-
-  <p class="highlight">📊 <strong>Cumulative GPA (CGPA up to 3-1):</strong> 7.99</p>
 </body>
 </html>
